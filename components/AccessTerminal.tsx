@@ -63,45 +63,24 @@ const AccessTerminal: React.FC<AccessTerminalProps> = ({ onAttemptUnlock, isErro
 
       <div className="max-w-xl w-full z-10 space-y-8 flex flex-col items-center">
         
-        {/* CUSTOM LOGO RECREATION */}
-        <motion.div variants={itemVariants} className="relative flex flex-col items-center mb-6 pt-8">
+        {/* CUSTOM LOGO RECREATION - STATIC FORM */}
+        <motion.div variants={itemVariants} className="relative flex flex-col items-center mb-6 pt-8 transform scale-90 md:scale-100">
           
-          {/* Decorative Elements (Floating) */}
-          <motion.div 
-            animate={{ rotate: [0, 10, 0] }}
-            transition={{ duration: 4, repeat: Infinity }}
-            className="absolute top-0 left-10"
-          >
+          {/* Decorative Elements (Static to preserve form) */}
+          <div className="absolute top-0 left-10">
              {/* Squiggle */}
              <svg width="40" height="12" viewBox="0 0 40 12" className="stroke-white stroke-[3] fill-none opacity-80">
                <path d="M2,6 Q10,-4 20,6 T38,6" />
              </svg>
-          </motion.div>
+          </div>
 
-          <motion.div 
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.5, type: "spring" }}
-            className="absolute top-2 right-1/3 w-4 h-4 border-[3px] border-usRed rounded-full" 
-          />
+          <div className="absolute top-2 right-1/3 w-4 h-4 border-[3px] border-usRed rounded-full" />
           
-          {/* Confetti Pieces */}
-          <motion.div 
-            animate={{ rotate: 360 }} 
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }} 
-            className="absolute -left-6 top-16 w-3 h-8 bg-yellow-400 -rotate-12 opacity-90" 
-          />
-          <motion.div 
-            animate={{ y: [0, -10, 0] }} 
-            transition={{ duration: 3, repeat: Infinity }} 
-            className="absolute right-4 top-20 w-2 h-2 bg-usRed rounded-full" 
-          />
-          <motion.div 
-            className="absolute left-24 -top-2 w-1.5 h-1.5 bg-usRed rounded-full" 
-          />
-          <motion.div 
-            className="absolute right-20 bottom-10 w-2 h-6 bg-red-600 rotate-45 opacity-80" 
-          />
+          {/* Confetti Pieces (Static) */}
+          <div className="absolute -left-6 top-16 w-3 h-8 bg-yellow-400 -rotate-12 opacity-90" />
+          <div className="absolute right-4 top-20 w-2 h-2 bg-usRed rounded-full" />
+          <div className="absolute left-24 -top-2 w-1.5 h-1.5 bg-usRed rounded-full" />
+          <div className="absolute right-20 bottom-10 w-2 h-6 bg-red-600 rotate-45 opacity-80" />
 
           {/* Main Text Block */}
           <div className="relative">
@@ -110,14 +89,11 @@ const AccessTerminal: React.FC<AccessTerminalProps> = ({ onAttemptUnlock, isErro
               <span className="text-white ml-3">STORE</span>
             </h1>
             
-            {/* Play Badge 2 */}
-            <motion.div 
-              whileHover={{ scale: 1.1, rotate: 10 }}
-              className="absolute -top-6 -right-10 bg-usRed text-white w-16 h-16 rounded-full flex items-center justify-center shadow-[0_4px_20px_rgba(220,38,38,0.6)] z-20 border-4 border-usBlack"
-            >
+            {/* Play Badge 2 - Static position */}
+            <div className="absolute -top-6 -right-10 bg-usRed text-white w-16 h-16 rounded-full flex items-center justify-center shadow-[0_4px_20px_rgba(220,38,38,0.6)] z-20 border-4 border-usBlack transform rotate-6">
               <Play size={14} fill="white" className="ml-1" /> 
               <span className="text-2xl font-black leading-none ml-0.5">2</span>
-            </motion.div>
+            </div>
           </div>
 
           {/* Subtitles */}

@@ -13,7 +13,8 @@ export enum AppState {
   LOCKED = 'LOCKED',
   UNLOCKING = 'UNLOCKING',
   GRANTED = 'GRANTED',
-  DENIED = 'DENIED'
+  DENIED = 'DENIED',
+  ERROR = 'ERROR'
 }
 
 // Data structure for the raw secret file
